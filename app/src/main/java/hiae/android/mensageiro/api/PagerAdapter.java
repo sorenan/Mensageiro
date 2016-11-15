@@ -11,10 +11,9 @@ import hiae.android.mensageiro.controller.Tab3_Fragment;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
-    Context teste;
-    public PagerAdapter(FragmentManager fm, int NumOfTabs, Context t) {
+
+    public PagerAdapter(FragmentManager fm, int NumOfTabs) {
         super(fm);
-        this.teste = t;
 
         this.mNumOfTabs = NumOfTabs;
     }
