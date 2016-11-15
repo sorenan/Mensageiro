@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Mensageiro</string>
+    <string name="company">Albert Einstein</string>
+    <string name="carregando">Verificando acesso à rede...</string>
+    <string name="app_intro_skip">Skip</string>
+    <string name="app_main_menu_op1">Opção1</string>
+    <string name="app_main_menu_op2">Opção2</string>
+    <string name="app_main_menu_op3">Opção3</string>
+    <string name="app_main_menu_op4">Opção4</string>
+    <string name="app_main_menu_op5">Opção5</string>
+    <string name="app_main_menu_op6">Opção6</string>
+
+
+
+
+    <string name="action_settings">Settings</string>
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">LOVE MUSIC</string>
+    <string name="backdrop_subtitle">This season top 20 albums</string>
+</resources>
