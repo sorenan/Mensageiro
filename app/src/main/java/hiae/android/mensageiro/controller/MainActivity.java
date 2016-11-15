@@ -13,13 +13,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-
-import hiae.android.mensageiro.R;
-import hiae.android.mensageiro.api.ActivityApi;
 import hiae.android.mensageiro.api.AndroidFragment;
 import hiae.android.mensageiro.api.PagerAdapter;
-import hiae.android.mensageiro.api.CustomAndroidGridViewAdapter;
 import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;
 import it.neokree.materialtabs.MaterialTabListener;
@@ -28,12 +23,11 @@ import it.neokree.materialtabs.MaterialTabListener;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
+
+import hiae.android.mensageiro.R;
 
 public class MainActivity extends ActionBarActivity implements MaterialTabListener {
 
@@ -113,27 +107,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         t.start();
 
 
-        //toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-//        gridView = (GridView) findViewById(R.id.grid);
-//        gridView.setAdapter(new CustomAndroidGridViewAdapter(this, gridViewStrings, gridViewImages));
-
-
-//        ImageView imageView = (ImageView) findViewById(R.id.gridview_image);
-//        imageView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent=new Intent(MainActivity.this,RecyclerCardActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-
-
         initInstances();
-
-
-
-
 
 
         //-------------------------- comeca parte do tabmenu
@@ -172,32 +146,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
             }
         });
 //
-//        //android toolbar
-//        toolBar = (android.support.v7.widget.Toolbar) this.findViewById(R.id.toolBar);
-//        this.setSupportActionBar(toolBar);
 //
-//        //tab host
-//        tabHost = (MaterialTabHost) this.findViewById(R.id.tabHost);
-//        viewPager = (ViewPager) this.findViewById(R.id.viewPager);
-//
-//        //adapter view
-//        androidAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-//        viewPager.setAdapter(androidAdapter);
-//        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-//            @Override
-//            public void onPageSelected(int tabposition) {
-//                tabHost.setSelectedNavigationItem(tabposition);
-//            }
-//        });
-//
-//        //for tab position
-//        for (int i = 1; i < androidAdapter.getCount(); i++) {
-//            tabHost.addTab(
-//                    tabHost.newTab()
-//                            .setText(androidAdapter.getPageTitle(i))
-//                            .setTabListener(this)
-//            );
-//        }
     }
 
     @Override
@@ -225,10 +174,6 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     }
 
     private void initInstances() {
-        //rootLayoutAndroid = (CoordinatorLayout) findViewById(R.id.android_coordinator_layout);
-        //collapsingToolbarLayoutAndroid = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_android_layout);
-
-        //collapsingToolbarLayoutAndroid.setTitle("Material Grid");
 
     }
 
