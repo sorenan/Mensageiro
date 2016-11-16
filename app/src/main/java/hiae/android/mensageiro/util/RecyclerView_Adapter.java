@@ -36,8 +36,8 @@ public class RecyclerView_Adapter extends RecyclerView
             dateTime2 =  (TextView) itemView.findViewById(R.id.textView3);
             imageView =  (ImageView) itemView.findViewById(R.id.imageView1);
             */
-            label  = (TextView) itemView.findViewById(R.id.title2);
-            dateTime = (TextView) itemView.findViewById(R.id.count);
+           // label  = (TextView) itemView.findViewById(R.id.person_age);
+            //dateTime = (TextView) itemView.findViewById(R.id.thumbnail);
             imageView = (ImageView) itemView.findViewById(R.id.thumbnail);
             //overflow = (ImageView) itemView.findViewById(R.id.overflow);
 
@@ -72,8 +72,8 @@ public class RecyclerView_Adapter extends RecyclerView
     @Override
     public void onBindViewHolder(DataObjectHolder holder, int position) {
 
-        holder.label.setText(mDataset.get(position).getmText1());
-        holder.dateTime.setText(mDataset.get(position).getmText2());
+       // holder.label.setText(mDataset.get(position).getmText1());
+        //holder.dateTime.setText(mDataset.get(position).getmText2());
         holder.imageView.setImageResource(mDataset.get(position).getmImageView());
     }
 

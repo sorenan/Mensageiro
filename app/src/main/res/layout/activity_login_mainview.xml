@@ -1,93 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background= "@color/logoazul"
-    android:orientation="vertical"
 
-    android:paddingRight="20dp"
-    android:paddingLeft="20dp"
-    android:paddingTop="20dp"
-    android:paddingBottom="20dp"
+
     app:theme="@style/AppStartTheme"
+
     >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background= "@android:color/white"
-        android:orientation="vertical"
-        android:padding="16dp"
 
-        >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background= "@color/logoazul"
+    android:elevation="10dp"
 
 
-    <!---//app:layout_collapseParallaxMultiplier="1.0" -->
-    <TextView
-        android:layout_width="match_parent"
+    >
+
+    <RelativeLayout
+
+        android:layout_width="310dp"
+        android:layout_height="500dp"
+
+        android:background= "@drawable/shapeloginactivity"
+        android:layout_centerInParent="true"
+
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@mipmap/logo"
+            android:id="@+id/loginlogo"
+            android:contentDescription=""
+            android:scaleType="fitCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cropToPadding="false"
+            android:layout_marginTop="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="false" />
+
+
+
+
+
+
+        <!---//app:layout_collapseParallaxMultiplier="1.0" -->
+
+        <android.support.design.widget.TextInputLayout
+        android:id="@+id/login_name_textlayout"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Sistema Mensageiro"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="40dp"
-        />
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/full_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_below="@id/loginlogo"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true">
 
         <EditText
+
             android:id="@+id/login_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Usuário"
             android:inputType="textPersonName"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"
-            android:textColor="@android:color/white" />
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:background="@drawable/shapetextfield"
+            />
     </android.support.design.widget.TextInputLayout>
 
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/password"
-        android:layout_width="fill_parent"
+        android:id="@+id/login_password_textlayout"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/login_name_textlayout"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="60dp"
-        >
+
+        android:layout_centerHorizontal="true">
 
         <EditText
-            android:id="@+id/create_new_password"
+            android:id="@+id/login_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Senha"
             android:inputType="textPassword"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"
+            android:background="@drawable/shapetextfield"
             />
     </android.support.design.widget.TextInputLayout>
 
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#3b5998"
-        android:text="Logar com o AD"
-        android:textAllCaps="false"
-        android:id="@+id/botaoLoginAD"
-        android:textColor="#fff" />
+        <Button
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <TextView
+            android:text="Logar com o AD"
+            android:textAllCaps="false"
+            android:id="@+id/botaoLoginAD"
+            android:textColor="#fff"
+            style="@style/Widget.AppCompat.Button"
+            android:elevation="@dimen/album_title"
+            android:layout_below="@id/login_password_textlayout"
+            android:background="@drawable/shapeassumirbutton"
+            />
+
+        <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -97,14 +124,21 @@
         android:textSize="10sp" />
 
     <Button
-        android:layout_width="fill_parent"
+        android:layout_width="372dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        android:background="#55acee"
+        android:layout_below="@id/botaoLoginAD"
+
+
         android:text="Acessar usuario externo"
         android:textAllCaps="false"
         android:textColor="#fff"
-        android:id="@+id/botaoLoginExternto"/>
+        android:id="@+id/botaoLoginExternto" />
+    </RelativeLayout>
+</RelativeLayout>
     </LinearLayout>
-</LinearLayout>
+
+    <!--#55acee
+
+    android:background="#3b5998"-->

@@ -40,7 +40,7 @@ public class Tab1_Fragment extends Fragment {
         RecyclerView mRecyclerView= (RecyclerView) view.findViewById(R.id.my_recycler_view1);
 
         mRecyclerView.setHasFixedSize(false);
-        //mLayoutManager = new LinearLayoutManager(MainActivity);
+        //mLayoutManager = new LinearLayoutManager(this);
         //mRecyclerView.setLayoutManager(mLayoutManager);
 
         mAdapter = new RecyclerView_Adapter(getDataSet());
@@ -58,27 +58,6 @@ public class Tab1_Fragment extends Fragment {
         return view;
     }
 
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_recycler_view);
-//
-//        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-//        mRecyclerView.setHasFixedSize(false);
-//        mLayoutManager = new LinearLayoutManager(this);
-//        mRecyclerView.setLayoutManager(mLayoutManager);
-//
-//        mAdapter = new RecyclerView_Adapter(getDataSet());
-//        mRecyclerView.setAdapter(mAdapter);
-//
-//        RecyclerView.ItemDecoration itemDecorationD = new RecyclerView_DividerItemDecoration(this, LinearLayoutManager.VERTICAL);
-//        RecyclerView.ItemDecoration itemDecorationV = new RecyclerView_VerticalSpaceItemDecoration(R.dimen.recycler_vertical_item_space);
-//        mRecyclerView.addItemDecoration(itemDecorationV);
-//        mRecyclerView.addItemDecoration(itemDecorationD);
-//
-//    }
-//
 //    @Override
 //    protected void onResume() {
 //        super.onResume();

@@ -1,20 +1,29 @@
 package hiae.android.mensageiro.controller;
 
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
 
 import hiae.android.mensageiro.R;
 import hiae.android.mensageiro.util.RecyclerView_Adapter;
 import hiae.android.mensageiro.util.RecyclerView_DataObject;
 import hiae.android.mensageiro.util.RecyclerView_DividerItemDecoration;
 import hiae.android.mensageiro.util.RecyclerView_VerticalSpaceItemDecoration;
+
 
 
 public class RecyclerCardActivity extends ActionBarActivity {
@@ -69,9 +78,60 @@ public class RecyclerCardActivity extends ActionBarActivity {
         ArrayList results = new ArrayList<RecyclerView_DataObject>();
         for (int index = 0; index < 20; index++) {
             RecyclerView_DataObject obj = new RecyclerView_DataObject("Some Primary Text " + index,
-                    "Secondary " + index,R.drawable.airplane_mode);
+                    "Secondary " + index,R.drawable.wheelchair);
             results.add(index, obj);
         }
         return results;
     }
+
+    public View Requisicao;
+
+    public void AssumirRequisicao (View view) {
+        this.Requisicao = view;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setMessage("Confirma atribuição da demanda?")
+                .setCancelable(false)
+                .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ChamaTela();
+                    }
+                })
+                .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+
+        alert.show();
+
+
+    }
+
+
+
+
+
+public void ChamaTela(){
+
+        RelativeLayout relativeLayout = (RelativeLayout) this.Requisicao.getParent().getParent();
+
+        TextView textView = (TextView) relativeLayout.findViewById(R.id.passagem_paciente);
+        Toast.makeText(getApplicationContext(), textView.getText(), Toast.LENGTH_SHORT).show();
+
+
+        Intent i = new Intent(this,RequisicaoActivity.class);
+
+        startActivity(i);
+
+
+
+    }
+
+
+
 }
